@@ -27,7 +27,7 @@ Accede al detalle de el producto con el id especificado
 ### - GET /products?category_id=id (ej /products?category_id=1)
 Accede al listado de los productos filtrando por categoria con el id especificado
 
-### - GET /products?product_price=(num≠0) (ej /products?product_price=1)
+### - GET /products?product_price=boolean (ej /products?product_price=true)
 Accede al listado de los productos mostrando en orden ascendente segun el precio 
 
 ### - GET /products?page=(registro) (ej /products?page=1)
