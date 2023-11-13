@@ -3,7 +3,7 @@ Grupo 50 - Baran Valeska Alexandra, Sironi Camila
 
 # ENDPOINTS:
 
-## GET /categories
+### - GET /categories
 Accede al listado de categorias
 
 GET /categories/:id (ej /categories/1)
