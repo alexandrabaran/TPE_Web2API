@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-10-2023 a las 03:51:01
+-- Tiempo de generación: 13-11-2023 a las 21:22:19
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -64,7 +64,15 @@ INSERT INTO `products` (`product_id`, `product_name`, `product_stock`, `product_
 (1, 'Medallones de calabaza', 20, 590, 1),
 (2, 'Barra de cereal de chocolate', 100, 300, 2),
 (3, 'Nueces peladas x 100 grs', 30, 1500, 3),
-(4, 'Kéfir de limón', 20, 1000, 4);
+(4, 'Kéfir de limón', 20, 1000, 4),
+(5, 'Medallon de lentejas', 5, 450, 1),
+(6, 'Almendras x 100 grs', 10, 2000, 3),
+(7, 'Kombucha', 10, 2500, 4),
+(8, 'Barrita de cereal de yogur', 50, 380, 2),
+(9, 'Barrita de cereal de chocolate y mani', 45, 320, 2),
+(10, 'Mani salado x 100 grs', 10, 600, 3),
+(11, 'Kéfir de arándanos', 5, 2380, 4),
+(12, 'Medallones de espinaca', 50, 740, 1);
 
 -- --------------------------------------------------------
 
@@ -122,7 +130,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
