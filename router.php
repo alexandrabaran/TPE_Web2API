@@ -1,18 +1,21 @@
 <?php
+    require_once 'app/config.php';
+    require_once 'libs/router.php';
+    require_once 'app/controllers/API.category.controller.php';
+    require_once 'app/controllers/API.product.controller.php';
 
-// :  _
+    $router = new Router();
 
-require_once 'libs/router.php';
-require_once 'app/controllers/productAPIController.php';
-require_once 'app/controllers/categoryAPIController.php'; 
+    $router->addRoute('categories', 'GET', 'APICategoryController', 'get');
+    $router->addRoute('categories/:ID', 'GET', 'APICategoryController', 'get');
+    $router->addRoute('categories',     'POST',   'APICategoryController', 'create');
+    $router->addRoute('categories/:ID', 'PUT',    'APICategoryController', 'update');
+    $router->addRoute('categories/:ID', 'DELETE', 'APICategoryController', 'delete');
 
-$router = new Router();
-
-//                    URL-ENDPOINT/VERBO/CONTROLLER/MÉTODO
-$router -> addRoute ('products','GET','productAPIController','getAll');
-$router -> addRoute ('categories','GET', 'categoryAPIController','getAll');
-$router -> addRoute ('products/:ID', 'PUT','productAPIController','updateProduct');
-$router -> addRoute ('categories/:ID', 'PUT','categoryAPIController','updateCategory');
-$router -> addRoute ('api/products/:ID/price/','GET','productAPIController','orderByPrice'); //hacer metodo
-
-$router -> route($_GET['resource'], $_SERVER['REQUEST_METHOD']);
+    $router->addRoute('products', 'GET', 'APIProductController', 'get');
+    $router->addRoute('products/:ID', 'GET', 'APIProductController', 'get');
+    $router->addRoute('products',     'POST',   'APIProductController', 'create');
+    $router->addRoute('products/:ID', 'PUT',    'APIProductController', 'update');
+    $router->addRoute('products/:ID', 'DELETE', 'APIProductController', 'delete');
+    
+    $router->route($_GET['resource'], $_SERVER['REQUEST_METHOD']);
