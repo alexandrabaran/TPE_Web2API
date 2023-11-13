@@ -30,7 +30,7 @@ Accede al listado de los productos filtrando por categoria con el id especificad
 ### - GET /products?product_price=boolean (ej /products?product_price=true)
 Accede al listado de los productos mostrando en orden ascendente segun el precio 
 
-### - GET /products?page=(registro) (ej /products?page=1)
+### - GET /products?page=registro (ej /products?page=1)
 Accede al listado de los productos mostrando a partir del registro siguiente al especificado
 
 ### - POST /products
